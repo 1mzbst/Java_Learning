@@ -1,4 +1,4 @@
-package org.example.Algrs;
+package org.example.algrs.homework;
 
     public class Seminar3 {
 
