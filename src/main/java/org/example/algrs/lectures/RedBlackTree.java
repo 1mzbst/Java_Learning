@@ -3,6 +3,11 @@ package org.example.algrs.lectures;
 public class RedBlackTree {
     private Node root;
 
+    /**
+     * @apiNote Добовление рутовой ноды
+     * @param value
+     * @return
+     */
     public boolean add (int value) {
         if (root !=null) {
             boolean result = addNode(root, value);
