@@ -1,5 +1,7 @@
 package org.example.lesson2.classwork;
 
+import static java.lang.Math.sqrt;
+
 public class Vector {
     public double x;
     public double y;
@@ -28,11 +30,26 @@ public class Vector {
      * @return длину вектора
      */
     public double vectorLength(){
-        return math.sqrt(x*x + y*y + z*z);
+        return sqrt(x*x + y*y + z*z);
     }
 
     public double scalar(Vector vector2){
+
         return x*vector2.x + y*vector2.y + z*vector2.z;
     }
 
+    /**
+     * @return векторное произведение
+     */
+    public Vector vectorMulti(Vector vector2) {
+        return new Vector(
+                y * vector2.z - z * vector2.y,
+                z * vector2.x - x * vector2.z,
+                x * vector2.y - y * vector2.x
+        );
+    }
+
+    public double kosVector (Vector vector2){
+        return scalar(vector2) / (vectorLength() * vector2.vectorLength());
+    }
 }
