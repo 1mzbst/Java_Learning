@@ -2,7 +2,7 @@ package org.example.lesson2.homework;
 
 import java.math.BigInteger;
 
-public class EXtest {
+public class CheckForPrime {
     public static void main(String [] args){
         Integer integer = 7;
         BigInteger bigInteger = BigInteger.valueOf(integer);
