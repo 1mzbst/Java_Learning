@@ -6,6 +6,11 @@ public class Ex1 {
         System.out.println("count = " + countSum(myArray));
     }
 
+    /**
+     * @apiNote находит сумму положительных чисел, после которых следует отрицательное число.
+     * @param array
+     * @return переменную с суммой.
+     */
     public static int countSum(int [] array){
         int count = 0;
         for (int i = 0; i < array.length; i++){
