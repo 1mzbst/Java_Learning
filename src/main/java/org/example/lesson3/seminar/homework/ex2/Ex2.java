@@ -11,9 +11,11 @@ public class Ex2 {
 
         List<Goods1> listOfGoods = new ArrayList<>(createList());
         System.out.println(listOfGoods);
-        int qer = listOfGoods.size();
+
         List<Goods1> oneMoreList = new ArrayList<>();
         List<Goods1> lessPrice = new ArrayList<>();
+        int qer = listOfGoods.size();
+        int qwe = oneMoreList.size();
         for (int i = 0; i < qer; i++){
             if(listOfGoods.get(i).getGrade().equals("1st")){
                 oneMoreList.add(listOfGoods.get(i));
@@ -21,10 +23,12 @@ public class Ex2 {
 
         }
         System.out.println(oneMoreList);
-        for(int j = 0; j<oneMoreList.size(); j++)
-            if (oneMoreList.get(j).getPrice() > oneMoreList.get(j + 1).getPrice()) {
+        for(int j = 0; j<oneMoreList.size() - 1; j++){
+            if (oneMoreList.get(j).getPrice() < oneMoreList.get(j + 1).getPrice()) {
                 lessPrice.add(oneMoreList.get(j));
             }
+        }
+
         System.out.println(lessPrice);
     }
 
