@@ -2,51 +2,113 @@ package org.example.lesson3.seminar.homework.ex2;
 
 import org.example.lesson3.seminar.homework.ex1.Goods;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Ex2 {
     public static void main (String[] args){
 
         List<Goods1> listOfGoods = new ArrayList<>(createList());
         System.out.println(listOfGoods);
+        // в данном задании пример состоит из списка с 1st сортом
+        System.out.println("Введите highest, 1st или 2nd сорт: ");
+        String gradeFromUser = getGradeFromUser();
+        List<Goods1> gradeList = new ArrayList<>(getGradeList(listOfGoods, gradeFromUser));
+        System.out.println("Список с товаром заданного сорта -> " + gradeList);
+        int minPrice = getMinPrice(gradeList);
+        System.out.println("наименьшая стоимость = " + minPrice);
+        List<String> lessPrice = new ArrayList<>(getLessPriceList(gradeList, minPrice));
+        System.out.println("Список товаров с наименьшей ценой -> " + lessPrice);
 
-        List<Goods1> oneMoreList = new ArrayList<>();
-        List<Goods1> lessPrice = new ArrayList<>();
-        int qer = listOfGoods.size();
-        int qwe = oneMoreList.size();
-        for (int i = 0; i < qer; i++){
-            if(listOfGoods.get(i).getGrade().equals("1st")){
-                oneMoreList.add(listOfGoods.get(i));
-            }
-
-        }
-        System.out.println(oneMoreList);
-        for(int j = 0; j<oneMoreList.size() - 1; j++){
-            if (oneMoreList.get(j).getPrice() < oneMoreList.get(j + 1).getPrice()) {
-                lessPrice.add(oneMoreList.get(j));
-            }
-        }
-
-        System.out.println(lessPrice);
     }
 
+    /**
+     * @apiNote ввод с клавиатуры сорт Grade
+     * @return grade
+     */
+    public static String getGradeFromUser (){
+        Scanner sc = new Scanner(System.in);
+        String grade = sc.next();
+        return grade;
+    }
 
+    /**
+     * @apiNote принимает список товаров и переменную с названием сорта grade
+     * @param list
+     * @param a
+     * @return новый список товаров заданного сорта grade
+     */
+    private static List<Goods1> getGradeList(List<Goods1> list, String a) {
+        List<Goods1> newList = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++){
+            if(list.get(i).getGrade().equals(a)){
+                newList.add(list.get(i));
+            }
+        }
+        return newList;
+    }
+    /**
+     * @apiNote принимает список товаров
+     * @param list
+     * @return возвращает наименьшую цену товара из списка
+     */
+    private static int getMinPrice(List<Goods1> list) {
+        int min = list.get(0).getPrice() ;
+        for(int j = 0; j<list.size(); j++) {
+            if (list.get(j).getPrice() < min) {
+                min = list.get(j).getPrice();
+            }
+        }
+        return min;
+    }
+    /**
+     * @apiNote принимает список товаров и переменную
+     * @param list
+     * @param min
+     * @return новый список товаров с наименьшей стоимостью
+     */
+    private static List<String> getLessPriceList(List<Goods1> list, int min) {
+        List<String> newListName = new ArrayList<>();
+        List<String> newListOrigin = new ArrayList<>();
+        List<String>newListResult = new ArrayList<>();
+        for(int j = 0; j<list.size(); j++)
+            if (list.get(j).getPrice() == min){
+                newListName.add(list.get(j).getName());
+//                newListOrigin.add(list.get(j).getOrigin());
+//                newListResult.add;
+            }
 
+        return newListName;
+    }
+
+    /**
+     * @apiNote список товаров
+     * @return список
+     */
     private static ArrayList<Goods1> createList() {
         ArrayList<Goods1> goodsList = new ArrayList<>();
         Random random = new Random();
-        goodsList.add(new Goods1("highest flour tree", "Russia" , random.nextInt(100),
-                "highest", random.nextInt(100)));
-        goodsList.add(new Goods1("highest butter", "USA", random.nextInt(100), "1st", random.nextInt(100)));
-        goodsList.add(new Goods1("highest seed oil", "Germany", random.nextInt(100), "2st", random.nextInt(100)));
-        goodsList.add(new Goods1("apples","Russia" , random.nextInt(100), "1st", random.nextInt(100)));
-        goodsList.add(new Goods1("flour",  "USA", random.nextInt(100), "highest", random.nextInt(100)));
-        goodsList.add(new Goods1("highest butter broad",  "Germany", random.nextInt(100), "1st", random.nextInt(100)));
-        goodsList.add(new Goods1("highest seed oil","Russia" , random.nextInt(100), "highest", random.nextInt(100)));
-        goodsList.add(new Goods1("pineapples", "USA", random.nextInt(100), "1st", random.nextInt(100)));
-        goodsList.add(new Goods1("highest pine", "Germany", random.nextInt(100), "2st", random.nextInt(100)));
+        goodsList.add(new Goods1("flour1", "Russia" , random.nextInt(100),
+                "highest", random.nextInt(1,5)));
+        goodsList.add(new Goods1("flour2", "USA", random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("flour3", "Germany", random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("apples1","Russia" , random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("apples2",  "USA", random.nextInt(100),
+                "highest", random.nextInt(1,5)));
+        goodsList.add(new Goods1("apples3",  "Germany", random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("pineapples1","Russia" , random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("pineapples2", "USA", random.nextInt(100),
+                "1st", random.nextInt(1,5)));
+        goodsList.add(new Goods1("pineapples3", "Germany", random.nextInt(100),
+                "2nd", random.nextInt(1,5)));
 
         return goodsList;
     }
