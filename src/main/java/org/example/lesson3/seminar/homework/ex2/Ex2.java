@@ -19,7 +19,7 @@ public class Ex2 {
         List<Goods1> gradeList = new ArrayList<>(getGradeList(listOfGoods, gradeFromUser));
         System.out.println("Список с товаром заданного сорта -> " + gradeList);
         int minPrice = getMinPrice(gradeList);
-        System.out.println("наименьшая стоимость = " + minPrice);
+        System.out.println("Наименьшая стоимость = " + minPrice);
         List<String> lessPrice = new ArrayList<>(getLessPriceList(gradeList, minPrice));
         System.out.println("Список товаров с наименьшей ценой -> " + lessPrice);
 
@@ -72,13 +72,9 @@ public class Ex2 {
      */
     private static List<String> getLessPriceList(List<Goods1> list, int min) {
         List<String> newListName = new ArrayList<>();
-        List<String> newListOrigin = new ArrayList<>();
-        List<String>newListResult = new ArrayList<>();
         for(int j = 0; j<list.size(); j++)
             if (list.get(j).getPrice() == min){
                 newListName.add(list.get(j).getName());
-//                newListOrigin.add(list.get(j).getOrigin());
-//                newListResult.add;
             }
 
         return newListName;
