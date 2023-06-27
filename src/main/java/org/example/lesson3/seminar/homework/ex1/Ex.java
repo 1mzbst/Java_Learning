@@ -1,13 +1,10 @@
 package org.example.lesson3.seminar.homework.ex1;
 
-import org.example.lesson3.seminar.classwork.ex1.Item;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
-public class Ex1 {
+public class Ex {
 
     public static void main (String[] args){
 

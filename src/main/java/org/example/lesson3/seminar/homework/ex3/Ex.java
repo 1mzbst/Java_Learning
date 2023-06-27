@@ -1,10 +1,11 @@
 package org.example.lesson3.seminar.homework.ex3;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Ex3 {
+import static java.lang.Math.sqrt;
+
+public class Ex {
     public static void main(String[] args) {
         System.out.println("наши книги" + createList());
         ArrayList<String> newArray = getNameOfBooks(createList());
@@ -12,26 +13,32 @@ public class Ex3 {
 
     }
 
+
+
     public static ArrayList<String> getNameOfBooks(ArrayList<Books> list){
         ArrayList<String> nameOfBooks = new ArrayList<>();
-        for (int i = 0; i<list.size();i++){
-            if ((list.get(i).getSurname().contains("А")) & (list.get(i).getYear() >= 2010)) {
-                checkForPrime(list.get(i).getPages());
-
-                    if (checkForPrime(list.get(i).getPages())) {
-                        nameOfBooks.add(list.get(i).getName());
-                    }
-
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getSurname().contains("A") && list.get(i).getYear()>=2010 &&
+                    IsSimple(list.get(i).getPages())){
+                nameOfBooks.add(list.get(i).getName());
             }
 
         }
         return nameOfBooks;
     }
 
-    public static boolean checkForPrime(Integer a){
-        BigInteger bigInteger = BigInteger.valueOf(a);
-        return bigInteger.isProbablePrime((int) Math.log(a));
+
+    public static boolean IsSimple(int ANum) {
+        if (ANum < 1)
+            return false;
+        double s = sqrt(ANum);
+        for (int i = 2; i <= s; i++) {
+            if (ANum % i == 0)
+                return false;
+        }
+        return true;
     }
+
 
     private static ArrayList<Books> createList(){
         ArrayList<Books> booksList = new ArrayList<>();

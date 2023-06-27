@@ -1,2 +1,29 @@
-package org.example.lesson6.classwork;public class Ex2 {
+package org.example.lesson6.classwork;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Ex2 {
+    public static void main(String[] args) {
+        // 2) Найти пересечение двух множеств
+        // Пример:
+        // set1= [1,2,3,4]
+        // set2= [3,5,6,7]
+        // Вывод в консоль: [3]
+
+        Set<Integer> set1 = new HashSet<>(Arrays.asList(1,2,3,4));
+        Set<Integer> set2 = new HashSet<>(Arrays.asList(3,5,6,7));
+        Set<Integer> resSet = new HashSet<>(set1);
+        var a = new TreeSet<>(set1);
+        var b = new TreeSet<>(set2);
+        resSet.retainAll(set2);
+        System.out.println(resSet);
+        System.out.println("set1 = " + set1);
+        System.out.println("set2 = " + set2);
+    }
 }
+
+
+

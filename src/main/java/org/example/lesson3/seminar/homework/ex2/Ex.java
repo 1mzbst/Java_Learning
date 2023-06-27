@@ -1,14 +1,11 @@
 package org.example.lesson3.seminar.homework.ex2;
 
-import org.example.lesson3.seminar.homework.ex1.Goods;
-
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ex2 {
+public class Ex {
     public static void main (String[] args){
 
         List<Goods1> listOfGoods = new ArrayList<>(createList());
