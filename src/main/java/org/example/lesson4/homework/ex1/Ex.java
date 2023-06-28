@@ -11,11 +11,14 @@ public class Ex {
         List<Integer> reverList = getReverse(list);
         System.out.println("Оборотень = " + reverList);
     }
+
+    /**
+     * @apiNote Ф-ия принимает целочисленный список
+     * @param list
+     * @return список с элементами идущими в обратном порядке
+     */
     public static List<Integer> getReverse(List<Integer> list ){
-//        List<Integer> reverList = new ArrayList<>();
         Collections.reverse(list);
         return list;
     }
-
-
 }
