@@ -1,7 +1,9 @@
 package org.example.lesson3.seminar.homework.ex4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class Ex {
     public static void main(String[] args) {
@@ -10,6 +12,11 @@ public class Ex {
         System.out.println("average(justList) = " + average(listOfNumbers()));
     }
 
+    /**
+     * @apiNote Вычисляет среднее арифметическое числе в массиве
+     * @param list
+     * @return
+     */
     public static double average(ArrayList<Integer> list){
         double sum = 0;
         for (int i = 0; i < list.size(); i++) {
