@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Ex {
     public static void main(String[] args) {
-
         String sentence = "Россия идет вперед всей планеты. Планета — это не Россия.";
         String enterFromKeyboard = getScanner();
         int count = getCount( getTransformString(sentence), enterFromKeyboard);
@@ -37,6 +36,7 @@ public class Ex {
         String sentenceRep4 = sentenceRep3.replaceAll("\\s+", " ");
         return sentenceRep4.split(" ");
     }
+
     /**
      * @apiNote проверяет, есть ли искомое слово введённое с клавиатуры в массиве строк
      * @param splitWords массив строк полученный при помощи фуии getTransformString
