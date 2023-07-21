@@ -3,6 +3,12 @@ package org.oop.homework.hw4;
 import java.util.Scanner;
 
 public class CalculatorMultiply {
+
+    /**
+     * @apiNote Метод перемножает два значения введённых с клавиатуры. Результат записывает в
+     * переменную.
+     * @return переменную res с результатом умножения.
+     */
     public double multiply(){
         double res = 0.0;
         Scanner digit1 = new Scanner(System.in);

@@ -2,6 +2,11 @@ package org.oop.homework.hw4;
 
 import java.util.Scanner;
 
+/**
+ * @apiNote Метод делит между собой два значения введённых с клавиатуры. Результат записывает в
+ * переменную.
+ * @return переменную res с результатом деления.
+ */
 public class CalculatorDivision {
     public double division() {
         double res = 0.0;
