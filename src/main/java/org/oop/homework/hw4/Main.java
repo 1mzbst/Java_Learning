@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         CalculatorMultiply calcMulti = new CalculatorMultiply();
         CalculatorDivision calcDiv = new CalculatorDivision();
         System.out.println("Выберите матиматическое действие (*, /):  ");
