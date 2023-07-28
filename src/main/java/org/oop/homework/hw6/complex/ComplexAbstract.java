@@ -1,7 +1,6 @@
 package org.oop.homework.hw6.complex;
 
-public class Divide {
+public abstract class ComplexAbstract {
     double real;
     double image;
-
 }

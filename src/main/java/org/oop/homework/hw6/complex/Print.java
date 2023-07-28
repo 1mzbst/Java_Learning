@@ -1,4 +1,4 @@
 package org.oop.homework.hw6.complex;
 
-public class Complex {
+public class Print {
 }
