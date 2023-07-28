@@ -1,6 +1,13 @@
 package org.oop.homework.hw6.complex;
 
-public abstract class ComplexAbstract {
-    double real;
-    double image;
+abstract class ComplexAbstract {
+    public final double re;
+    public final double im;
+
+
+    public ComplexAbstract(double re, double im) {
+        this.re = re;
+        this.im = im;
+    }
+
 }

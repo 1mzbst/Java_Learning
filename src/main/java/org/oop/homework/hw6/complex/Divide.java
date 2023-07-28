@@ -1,7 +1,5 @@
 package org.oop.homework.hw6.complex;
 
 public class Divide {
-    double real;
-    double image;
 
 }

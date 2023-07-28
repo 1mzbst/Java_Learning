@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class MathOperation {
     char mathDoings;
 
+    /**
+     * @apiNote Через сканер плучает математическии операции "*", "/", "+", "-" записывает их переменную mathDoings.
+     * @return mathDoings c математической операцией.
+     */
     public char getMathValue(){
         Scanner scanner = new Scanner(System.in);
         if(scanner.hasNext()){

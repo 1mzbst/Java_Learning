@@ -1,4 +1,6 @@
 package org.oop.homework.hw6.complex;
 
-public class Multiply {
+public class Multiply{
+
+
 }
