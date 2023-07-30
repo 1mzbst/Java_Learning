@@ -1,6 +1,6 @@
 package org.oop.homework.hw6.complex;
 
-public class Sum extends ComplexAbstract {
+public class Sum extends ComplexAbstract implements SumInterface {
 
     public Sum(double re, double im) {
         super(re, im);
@@ -11,6 +11,7 @@ public class Sum extends ComplexAbstract {
         double imag = b.im + b.im;
         Sum sum = new Sum(real, imag);
         return sum;
+
     }
 
     public String toString() {
@@ -20,4 +21,6 @@ public class Sum extends ComplexAbstract {
         return re + " + " + im + "i";
 
     }
+
+
 }

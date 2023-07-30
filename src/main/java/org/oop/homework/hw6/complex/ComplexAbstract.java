@@ -9,5 +9,4 @@ abstract class ComplexAbstract {
         this.re = re;
         this.im = im;
     }
-
 }
