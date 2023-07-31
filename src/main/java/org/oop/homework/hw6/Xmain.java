@@ -1,5 +1,6 @@
 package org.oop.homework.hw6;
 
+import org.oop.homework.hw6.complex.Divide;
 import org.oop.homework.hw6.complex.Multiply;
 import org.oop.homework.hw6.complex.Sum;
 
@@ -12,9 +13,12 @@ public class Xmain {
 
 //        System.out.println("b + a  = " + Sum.getSum(a,b));
 
-        Multiply a = new Multiply(5,6);
-        Multiply b = new Multiply(-3,4);
-        System.out.println("a * b  = " + Multiply.getMultiply(a,b));
+//        Multiply a = new Multiply(5,6);
+//        Multiply b = new Multiply(-3,4);
+//        System.out.println("a * b  = " + Multiply.getMultiply(a,b));
+        Divide a = new Divide(5,6);
+        Divide b = new Divide(-3,4);
+        System.out.println("a/b  = " + Divide.getDivide(a,b));
     }
 
 

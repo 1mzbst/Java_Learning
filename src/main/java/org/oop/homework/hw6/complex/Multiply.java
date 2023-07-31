@@ -8,8 +8,6 @@ public class Multiply extends  ComplexAbstract implements MultiplyInterface{
     }
 
     public static Multiply getMultiply(Multiply a,  Multiply b) {
-//         = this;
-//        = this;
         double real = a.re * b.re - a.im * b.im;
         double imag = a.re * b.im + a.im * b.re;
         return new Multiply(real, imag);
