@@ -10,11 +10,11 @@ public class MathOperation {
     public char getMathValue(){
         Scanner scanner = new Scanner(System.in);
         if(scanner.hasNext()){
-            this.mathDoings = scanner.next().charAt(0);
+            mathDoings = scanner.next().charAt(0);
         } else {
             System.out.println("Что то пошло не так, попробуйте снова!");
             getMathValue();
         }
-        return this.mathDoings;
+        return mathDoings;
     }
 }

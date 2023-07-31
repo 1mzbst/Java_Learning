@@ -1,20 +1,22 @@
 package org.oop.homework.hw6;
 
-public class Calculator {
-    double result;
+import org.oop.homework.hw6.complex.*;
+import org.oop.homework.hw6.results.*;
 
-    public double getResult(double num1, double num2) {
+public class Calculator {
+
+
+    public static void getResult() {
         MathOperation mathOp = new MathOperation();
         switch (mathOp.getMathValue()) {
-            case '+' -> result = num1 + num2;
-            case '-' -> result = num1 - num2;
-            case '*' -> result = num1 * num2;
-            case '/' -> result = num1 / num2;
+            case '+' -> SumResult.getSumResult();
+            case '*' -> MultiplyResult.getMultiplyResult();
+            case '/' -> DivideResult.getDivideResult();
             default -> {
                 System.out.println("Вы ничего не ввели! Нажимайте на кнопки!");
-                result = getResult(num1, num2);
+                getResult();
             }
         }
-        return result;
+
     }
 }
