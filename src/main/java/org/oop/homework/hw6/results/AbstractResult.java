@@ -15,14 +15,21 @@ public abstract class AbstractResult implements ResultsInterface{
         this.im2 = im2;
     }
 
+    /**
+     * Метод вызова сканеров для заполнения переменных с клавиатуры.
+     */
     public static void getScanner() {
         Scanner scanner1 = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);
         Scanner scanner3 = new Scanner(System.in);
         Scanner scanner4 = new Scanner(System.in);
+        System.out.println("Введите действительную часть первого комплексного числа: ");
         re1 = scanner1.nextDouble();
+        System.out.println("Введите 'мнимую' часть комплексного числа: ");
         im1 = scanner2.nextDouble();
+        System.out.println("Введите действительную часть второого комплексного числа: ");
         re2 = scanner3.nextDouble();
+        System.out.println("Введите 'мнимую' часть второого комплексного числа: ");
         im2 = scanner4.nextDouble();
     }
 }

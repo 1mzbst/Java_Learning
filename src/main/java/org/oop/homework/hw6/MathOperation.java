@@ -8,6 +8,13 @@ public class MathOperation {
      * @return mathDoings c математической операцией.
      */
     public char getMathValue(){
+        System.out.println("""
+                Выберите действие:\s
+                << * >> - умножение;\s
+                << / >> - деление;\s
+                << + >> сложение;\s
+                Ввдите значение: \s""");
+
         Scanner scanner = new Scanner(System.in);
         if(scanner.hasNext()){
             mathDoings = scanner.next().charAt(0);

@@ -1,4 +1,4 @@
-package org.oop.homework.hw6.complex;
+package org.oop.homework.hw6.complex.abstracts;
 
 public abstract class ComplexAbstract {
     public final double re;
