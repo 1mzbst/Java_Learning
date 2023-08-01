@@ -11,6 +11,6 @@ public class MultiplyResult extends AbstractResult {
         AbstractResult.getScanner();
         Multiply a = new Multiply(re1, im1);
         Multiply b = new Multiply(re2, im2);
-        System.out.println("a/b  = " + Multiply.getMultiply(a, b));
+        System.out.println("Результат произведения двух комплексных чисел  = " + Multiply.getMultiply(a, b));
     }
 }

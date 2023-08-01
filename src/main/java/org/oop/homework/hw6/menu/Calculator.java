@@ -1,6 +1,5 @@
-package org.oop.homework.hw6;
+package org.oop.homework.hw6.menu;
 
-import org.oop.homework.hw6.complex.*;
 import org.oop.homework.hw6.results.*;
 
 public class Calculator {

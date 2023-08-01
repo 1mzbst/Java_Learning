@@ -12,8 +12,8 @@ public class Divide extends ComplexAbstract implements DivideInterface {
     /**
      * @apiNote Принимает на вход два объеккта Divide от абстрактного класса ComplexAbstract, происзводит математические действия
      * по формуле произведения комплексных чисел.
-     * @param a
-     * @param b
+     * @param a Объект класса Divide
+     * @param b Объект класса Divide
      * @return Возваращает новый объект класса Divide.
      */
     public static Divide getMultiply(Divide a, Divide b) {
@@ -24,8 +24,8 @@ public class Divide extends ComplexAbstract implements DivideInterface {
     /**
      * @apiNote Принимает на вход два объеккта Divide от абстрактного класса ComplexAbstract, происзводит математические
      * действия по формуле деления комплексных чисел.
-     * @param a
-     * @param b
+     * @param a Объект класса Divide
+     * @param b Объект класса Divide
      * @return Возваращает новый объект класса Divide, вычесленный при помощи метода getMultiply и метода getReciprocal.
      */
     public static Divide getDivide(Divide a, Divide b) {

@@ -10,6 +10,6 @@ public class SumResult extends AbstractResult{
         AbstractResult.getScanner();
         Sum a = new Sum(re1, im1);
         Sum b = new Sum(re2, im2);
-        System.out.println("a/b  = " + Sum.getSum(a, b));
+        System.out.println("Сумма двух комплексных чисел  = " + Sum.getSum(a, b));
     }
 }

@@ -12,8 +12,8 @@ public class Multiply extends ComplexAbstract implements MultiplyInterface {
     /**
      * @apiNote Принимает на вход два объеккта Multiply от абстрактного класса ComplexAbstract, происзводит
      * математические действия по формуле произведения комплексных чисел.
-     * @param a
-     * @param b
+     * @param a Объект класса Multiply
+     * @param b Объект класса Multiply
      * @return Возваращает новый объект класса Multiply.
      */
     public static Multiply getMultiply(Multiply a,  Multiply b) {

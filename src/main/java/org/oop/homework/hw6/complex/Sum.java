@@ -11,15 +11,14 @@ public class Sum extends ComplexAbstract implements SumInterface {
     /**
      * @apiNote Принимает на вход два объеккта Sum от абстрактного класса ComplexAbstract, происзводит
      * математические действия по формуле сложения комплексных чисел.
-     * @param a
-     * @param b
+     * @param a Объект класса Sum
+     * @param b Объект класса Sum
      * @return Возваращает новый объект класса Sum.
      */
     public static Sum getSum(Sum a, Sum b) {
         double real = a.re + b.re;
         double imag = b.im + b.im;
-        Sum sum = new Sum(real, imag);
-        return sum;
+        return new Sum(real, imag);
 
     }
 

@@ -11,7 +11,8 @@ public class DivideResult extends AbstractResult{
         AbstractResult.getScanner();
         Divide a = new Divide(re1, im1);
         Divide b = new Divide(re2, im2);
-        System.out.println("a/b  = " + Divide.getDivide(a, b));
+        System.out.println("Результат деления двух комплексных чисел   = " + Divide.getDivide(a, b));
     }
+
 
 }
