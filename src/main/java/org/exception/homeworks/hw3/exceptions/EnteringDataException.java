@@ -1,4 +1,4 @@
-package org.exception.homeworks.hw3;
+package org.exception.homeworks.hw3.exceptions;
 
 import java.io.IOException;
 

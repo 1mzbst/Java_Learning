@@ -5,10 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CheckForBirthDate {
-    public static Date CheckForFio(String[] array) throws ParseException {
-//        String surname = array[0];
-//        String name = array[1];
-//        String patronymic = array[2];
+    public static Date CheckForBirthDate(String[] array) throws ParseException {
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date birthdate;
