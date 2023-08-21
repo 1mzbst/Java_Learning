@@ -12,7 +12,8 @@ public class WriteInFile {
         String name = array[1];
         String patronymic = array[2];
 
-        String fileName = "C:\\Users\\Дмитрий\\Desktop\\ForHW\\" + surname.toLowerCase() + ".txt";
+
+        String fileName = "\\Desktop\\ForHW\\" + surname.toLowerCase() + ".txt"; // сохраняет на рабочий стол
         File file = new File(fileName);
         try (FileWriter fileWriter = new FileWriter(file, true)) {
             if (file.length() > 0) {
