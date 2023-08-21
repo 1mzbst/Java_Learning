@@ -3,6 +3,7 @@ import java.io.*;
 import java.nio.file.FileSystemException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -44,11 +45,11 @@ public class Main {
 
         try {
             makeRecord();
-            System.out.println("success");
+            System.out.println("File was written");
         } catch (FileSystemException e) {
             System.out.println(e.getMessage());
         } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
     }
 
@@ -73,7 +74,7 @@ public class Main {
         String name = array[1];
         String patronymic = array[2];
 
-        SimpleDateFormat format = new SimpleDateFormat("dd.mm.yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date birthdate;
         try {
             birthdate = format.parse(array[3]);
@@ -89,11 +90,11 @@ public class Main {
         }
 
         String sex = array[5];
-        if (!sex.toLowerCase().equals("m") && !sex.toLowerCase().equals("f")){
+        if (!sex.equalsIgnoreCase("m") && !sex.equalsIgnoreCase("f")){
             throw new RuntimeException("Неверно введен пол");
         }
 
-        String fileName = "files\\" + surname.toLowerCase() + ".txt";
+        String fileName = "C:\\Users\\Dmitriy\\Desktop\\ForHW\\" + surname.toLowerCase() + ".txt";
         File file = new File(fileName);
         try (FileWriter fileWriter = new FileWriter(file, true)){
             if (file.length() > 0){
